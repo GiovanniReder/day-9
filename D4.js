@@ -126,10 +126,23 @@ console.log(upperFirst("ciao come stai?"));
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-const cutString
+const cutString = function (unastringa) {
+  return unastringa.slice(1, -1);
+};
+console.log(cutString("una stringa di esempio"));
 
 /* ESERCIZIO 10
- Scrivi una funzione di nome "giveMeRandom", che accetta come parametro un numero n e ritorna un'array contenente n numeri casuali inclusi tra 0 e 10.
+ Scrivi una funzione di nome "giveMeRandom", che accetta come parametro un numero n e ritorna un'array contenente n numeri casuali inclusi
+  tra 0 e 10.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+const giveMeRandom = function (n) {
+  let arr = [];
+  for (let i = 0; i < n; i++) {
+    let nrand = Math.floor(Math.random() * 11);
+    arr.push(nrand);
+  }
+  return arr;
+};
+console.log(giveMeRandom(20));
